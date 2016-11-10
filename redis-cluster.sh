@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#
+# chkconfig:   - 86 16
 
 PORT=(6376 6377 6378 6379 6380 6381 6382 6383)
 if [[ `ifconfig eth0 >/dev/null 2>&1 && echo ok` ]]; then
@@ -61,7 +63,7 @@ case "$1" in
         $0 start
         ;;
     status)
-        redis-trib.rb check $LOCALIP:${PORT[2]}
+        redis-trib.py check $LOCALIP:${PORT[2]}
         ;;
     info)
         MPORT=$(redis-cli -p ${PORT[2]} cluster nodes |grep master |awk '{print $2}' |awk -F':' '{print $2}')
