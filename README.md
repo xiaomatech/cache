@@ -1,6 +1,6 @@
 # redis
 
-$pika 
+#pika 
   https://github.com/Qihoo360/pika/releases
 
 #codis
