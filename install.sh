@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-yum install -y redis
+yum install -y redis redis-trib glog snappy
 sudo useradd redis -s /sbin/nologin
 mkdir /data/redis && chown -R redis:redis /data/redis
 mkdir -p /etc/redis/auto
